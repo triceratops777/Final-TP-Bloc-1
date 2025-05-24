@@ -541,15 +541,13 @@ nav a {
   }
 nav {
   max-width: 400;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0.5rem;
   max-width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
-  gap: 0.1rem;
+  gap: 0.3rem;
 }
 #jg-short{
     color: white;
