@@ -1,3 +1,5 @@
+// adding CV and hiding on click
+
 document.getElementById("cv").onclick = function() {
     document.getElementById("cvimg").style.visibility = "visible";
 }
@@ -6,6 +8,8 @@ document.getElementById("cvimg").onclick = function() {
     document.getElementById("cvimg").style.visibility = "hidden";
 }
 
+
+// adding filter of the dev projects
 document.addEventListener("DOMContentLoaded", () => {
 
     // querySelectorAll gets all elements and puts them in a NodeList, which is array-like, but not an array; access with index as usual
@@ -28,4 +32,43 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
+});
+
+// photography slideshow 
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("show");
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex - 1].classList.add("show");
+  setTimeout(showSlides, 4000);
+}
+
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Stop default form submission
+
+  const nom = document.getElementById('nom').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (!nom || !email || !message) {
+    alert('Veuillez remplir tous les champs.');
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Veuillez entrer un email valide.');
+    return;
+  }
+
+  alert('Message envoyé !');
+  // Optionally clear form
+  this.reset();
 });

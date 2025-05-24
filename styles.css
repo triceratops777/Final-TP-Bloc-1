@@ -14,10 +14,10 @@ nav {
   z-index: 1000;
   position: fixed;  
   top: 0;
-  background-color: rgba(254, 255, 217, 0.6);
+  background-color: rgba(255, 255, 242, 0.8);
   display: flex;
   justify-content: space-evenly;
-  height: 4.5rem;
+  min-height: 4.5rem;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -39,13 +39,24 @@ nav a:hover {
   background-color: rgba(247, 232, 167, 0.6);
 }
 
+.nav-icon{
+  display: none;
+}
+
+
 
 /* LOGO */
 #jg{
     font-family: "Protest Guerrilla", sans-serif;
     font-size: 2rem;
-    padding: 10px 20px;
-    
+    padding: 1rem;  
+}
+
+#jg-short{
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 2rem;
+    padding: 10px 20px;  
+    display: none;
 }
 
 
@@ -63,16 +74,16 @@ nav a:hover {
   background-image: url(images/bghome.png);
   background-repeat: no-repeat;
   background-attachment: absolute;
-  background-position: center;
+  background-position: top;
   background-size: cover;
-  height: 67rem;
+  height: 50rem;
 }
 
 .hometext{
   position: relative;
-  top: 32rem;
+  top: 20rem;
   margin:auto;
-  max-width: 80rem;
+  max-width: 70rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -80,10 +91,10 @@ nav a:hover {
 
 .greeting {
   font-family: "Protest Guerrilla", sans-serif;
-  font-size: 3.81rem;
   color: rgb(255, 255, 255);
   text-align: center;
-  
+  font-size: clamp(1.5rem, 7vw, 3.8rem);
+  white-space: nowrap; 
 }
 
 .about{
@@ -91,18 +102,19 @@ nav a:hover {
   color: white;
   background-color: rgb(24, 84, 102, 0.40);  
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   max-width: 50rem;
   margin: auto;
   text-align: center;
   padding: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
 
 }
 
 /* GLOBAL TITLE */
 .title{
   font-family: "Protest Guerrilla", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: rgb(0, 0, 0);
   text-align: center;
   padding-bottom: 3rem;
@@ -117,7 +129,7 @@ nav a:hover {
 /*SKILLS PAGE*/
 
 #skills {
-  background-image: url();
+  background-image: url(images/bgskills.jpg);
   background-repeat: no-repeat;
   background-attachment: absolute;
   background-position: center;
@@ -126,15 +138,21 @@ nav a:hover {
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-
 }
+
+
 
 .skills-container{
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 4rem;
+  max-width: 80%;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
+}
+.mobile-skills{
+  display: none;
 }
 
 .skill{
@@ -142,8 +160,9 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  min-width: 18rem;
-  min-height: 10rem;
+  max-width: 18rem;
+  padding: 2rem;
+  max-height: 10rem;
   background: #FFF5E8;
   border: 1px solid #B66E47;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -178,9 +197,7 @@ nav a:hover {
 }
 
 #cv{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
   height: 7rem;
   width: 7rem;
   font-size: 4rem;
@@ -208,19 +225,26 @@ nav a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-image: url(images/bgdev.jpg);
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+  background-size: cover;
 }
 
 .filterbuttons{
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
-  padding: 0 8rem;
+  max-width: 50%;
   gap: 1rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
 }
 
 .filterbuttons button{
   padding: 1rem 3rem;
-  background-color: rgb(239, 238, 223, 0.5);
+  background-color: rgb(239, 238, 223, 0.7);
   text-decoration: none;  
   font-size: 1rem;
   font-family: "Nunito", sans-serif;
@@ -230,21 +254,18 @@ nav a:hover {
 }
 
 .filterbuttons button:hover{
-  background-color:rgba(87, 87, 55, 0.5);
+  background-color:rgba(87, 87, 55, 0.7);
   color: white;
   cursor: pointer;
 }
-
-
 
 .dev-grid{
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  padding: 0 8rem;
+  max-width: 80%;
   margin: auto;
-
 }
 
 .dev-card{
@@ -274,18 +295,237 @@ nav a:hover {
 
 /* PHOTOGRAPHY */
 
+#photography{
+  background-image: url(images/bgphoto.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+  background-size: cover;
+}
+
+.slide-container {
+  position: relative;
+  max-width: 70%;
+  aspect-ratio: 3 / 2; 
+  margin: auto;
+  overflow: hidden;
+  border-radius: 1%;
+}
+
+.mySlides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;       
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.mySlides.show {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* FOOTER */
+
+#contact{
+  background-image: url(images/bgfooter.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+  background-size: cover;
+  height: 55rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.contact-form {
+  max-width: 25rem;
+  width: 25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Nunito", sans-serif;
+  color: #cd7a4d;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #cd7a4d;
+  background-color: white;
+  border-radius: 4px;
+  
+}
+
+.contact-form textarea{
+  width: 100%;       
+  height: 7rem;      
+  resize: none;       
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-actions button {
+  background-color: #E4F9EB;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+.footer-block {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; 
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+@media (max-width: 1105px) {
+  nav a {
+    font-size: 1.1rem;
+    padding: 0 1.5rem;
+  }
+  #jg{
+    display: none;
+  }
+  #jg-short{
+    display: block;
+  }
+  .slide-container{
+    max-width: 90%;
+  }
+  .greeting{
+    font-size: 3rem;
+    white-space: wrap;
+  }
+
+  .dev-grid{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: auto;
+}
+
+}
 
 
 
+@media (max-width: 750px) {
+  nav a {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+  .dev-grid{
+  gap: 2rem;
+}
+.filterbuttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+  .skills-container{
+    display:none;
+  }
+  .mobile-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+  }
+  .mobile-skills-grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+
+  }
+  #mobilecv{
+  padding: 20px;
+  height: 6rem;
+  width: 6rem;
+  font-size: 3rem;
+  margin: 1rem;
+  background: #FFF5E8;
+  border: 1px solid #B66E47;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  font-family: "Protest Guerrilla", sans-serif;  
+}
+#mobilecv:hover{
+  cursor: pointer;
+}
+
+}
 
 
 @media (max-width: 600px) {
+  .nav-text{
+    display: none;
+  }
+  .nav-icon{
+    display: block;
+  }
   nav {
-    flex-direction: column;
-    height: auto;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(95, 95, 95, 0.6);
+    padding: 0;
   }
   nav a {
-    padding: 10px;
+    height: 100%;
+    align-content: center;
   }
+  #jg-short{
+    color: white;
+    font-size: 2.4rem;
+  }
+  .slide-container{
+    max-width: 100%;
+  }
+  .contact-form {
+    max-width: 17rem;
+    margin: 0 auto;
+  }
+  .dev-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+
 }
