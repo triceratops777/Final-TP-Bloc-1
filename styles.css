@@ -505,7 +505,6 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     background-color: rgba(95, 95, 95, 0.6);
-    padding: 0;
   }
   nav a {
     height: 100%;
