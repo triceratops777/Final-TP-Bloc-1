@@ -21,6 +21,7 @@ nav {
   min-height: 4.5rem;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 nav a {
