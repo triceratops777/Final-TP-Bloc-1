@@ -533,7 +533,7 @@ nav a:hover {
 
 
 @media (max-width: 400px){
-  nav{
+  body{
     max-width: 400px;
   }
 }
