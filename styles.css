@@ -21,7 +21,6 @@ nav {
   min-height: 4.5rem;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 nav a {
@@ -502,8 +501,8 @@ nav a:hover {
     display: block;
   }
   nav {
-    width: 100vw;
-    height: 2rem;
+    max-width: 100%;
+    height: auto;
     align-items: center;
     justify-content: center;
     background-color: rgba(95, 95, 95, 0.6);
@@ -514,7 +513,10 @@ nav a:hover {
     align-content: center;
     padding: 0.5rem 1rem;
     font-size: 1rem;
+
   }
+
+
   #jg-short{
     color: white;
     font-size: 2.4rem;
@@ -532,4 +534,11 @@ nav a:hover {
   }
 
 
+}
+
+@media (max-width: 400px){
+  .nav-icon svg {
+  width: 24px; /* scale down icons */
+  height: auto;
+  }
 }
