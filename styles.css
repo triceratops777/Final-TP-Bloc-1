@@ -533,13 +533,14 @@ nav a:hover {
     grid-template-rows: repeat(6, 1fr);
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
 nav svg {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
   }
 nav {
+  max-width: 400;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -548,6 +549,6 @@ nav {
   max-width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
-  margin: 0;
+  gap: 0.1rem;
 }
 }
