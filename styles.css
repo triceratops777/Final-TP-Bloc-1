@@ -534,7 +534,7 @@ nav a:hover {
   }
 }
 @media (max-width: 400px) {
-nav svg {
+nav a {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
