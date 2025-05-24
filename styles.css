@@ -509,6 +509,7 @@ nav a:hover {
   nav a {
     height: 100%;
     align-content: center;
+    justify-content: space-between;
   }
   #jg-short{
     color: white;
