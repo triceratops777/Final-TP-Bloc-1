@@ -540,7 +540,7 @@ nav a {
     flex-shrink: 0;
   }
 nav {
-  max-width: 400;
+  max-width: 400px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   padding: 0.5rem;
@@ -548,7 +548,7 @@ nav {
   box-sizing: border-box;
   overflow-x: hidden;
   gap: 0.3rem;
-}
+  }
 #jg-short{
     color: white;
     font-size: 1.5rem;
