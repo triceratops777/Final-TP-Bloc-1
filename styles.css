@@ -537,7 +537,11 @@ nav a:hover {
 nav a {
     width: 24px;
     height: 24px;
-    flex-shrink: 0;
+  }
+
+nav a svg {
+    width: 24px;
+    height: 24px;
   }
 nav {
   max-width: 400px;
