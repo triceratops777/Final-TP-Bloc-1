@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* NAV */
+nav {
+  width: 100%;
+  z-index: 1000;
+  position: fixed;  
+  top: 0;
+  background-color: rgba(254, 255, 217, 0.6);
+  display: flex;
+  justify-content: space-evenly;
+  height: 4.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+nav a {
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-family: "Nunito", sans-serif;
+  color: #185466;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(247, 232, 167, 0.6);
+}
+
+
+/* LOGO */
+#jg{
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 2rem;
+    padding: 10px 20px;
+    
+}
+
+
+/* PAGE FORMAT */
+
+.page {
+  padding: 80px 20px; 
+}
+
+/*HOME PAGE*/
+
+#home {
+  top: 0;
+  position: relative;
+  background-image: url(images/bghome.png);
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+  background-size: cover;
+  height: 67rem;
+}
+
+.hometext{
+  position: relative;
+  top: 32rem;
+  margin:auto;
+  max-width: 80rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.greeting {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 3.81rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  
+}
+
+.about{
+  font-family: "Nunito", sans-serif;
+  color: white;
+  background-color: rgb(24, 84, 102, 0.40);  
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 50rem;
+  margin: auto;
+  text-align: center;
+  padding: 1rem;
+
+}
+
+/* GLOBAL TITLE */
+.title{
+  font-family: "Protest Guerrilla", sans-serif;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+/* FOOTER TITLE */
+#footer-title{
+  color: #CD7A4D;
+}
+
+
+/*SKILLS PAGE*/
+
+#skills {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.skills-container{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 18rem;
+  min-height: 10rem;
+  background: #FFF5E8;
+  border: 1px solid #B66E47;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.skill-left{
+  border-radius: 0px 50px;
+}
+.skill-right{
+  border-radius: 50px 0px;
+}
+
+.skill-icon{
+  padding: 1rem;
+  max-width: 3rem;
+}
+
+.skill-text{
+  font-size: 1.25rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 3rem;
+}
+
+#cv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  width: 7rem;
+  font-size: 4rem;
+  background: #FFF5E8;
+  border: 1px solid #B66E47;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 60px;
+  font-family: "Protest Guerrilla", sans-serif;  
+}
+
+#cv:hover{
+  cursor: pointer;
+}
+
+#cvimg{
+  margin-top: 3rem;
+  position: absolute;
+  height: 53rem;
+  visibility: hidden;
+
+}
+
+/* WEB DEV PORTFOLIO */
+#dev {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.filterbuttons{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 8rem;
+  gap: 1rem;
+}
+
+.filterbuttons button{
+  padding: 1rem 3rem;
+  background-color: rgb(239, 238, 223, 0.5);
+  text-decoration: none;  
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+}
+
+.filterbuttons button:hover{
+  background-color:rgba(87, 87, 55, 0.5);
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.dev-grid{
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0 8rem;
+  margin: auto;
+
+}
+
+.dev-card{
+  border-radius: 20px;
+  background-color: rgb(239, 238, 223, 0.5);
+}
+
+.dev-card:hover{
+  background-color:rgba(87, 87, 55, 0.5);
+  color: white;
+}
+
+.dev-card img{
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.dev-card p {
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+
+
+/* PHOTOGRAPHY */
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+  nav a {
+    padding: 10px;
+  }
+}
