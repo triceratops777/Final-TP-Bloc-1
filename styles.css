@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 
@@ -501,6 +502,7 @@ nav a:hover {
     display: block;
   }
   nav {
+    width: 100vw;
     height: 2rem;
     align-items: center;
     justify-content: center;
@@ -510,6 +512,8 @@ nav a:hover {
   nav a {
     height: 100%;
     align-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
   }
   #jg-short{
     color: white;
