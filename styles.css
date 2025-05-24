@@ -503,21 +503,21 @@ nav a:hover {
   }
   nav {
     height: 2rem;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(95, 95, 95, 0.6);
     padding: 0;
+    
   }
   nav a {
     height: 100%;
     align-content: center;
     padding: 0;
-    
   }
-
+  
   #jg-short{
     color: white;
     font-size: 2.4rem;
-    padding: 0.1rem;
   }
   .slide-container{
     max-width: 100%;
@@ -532,4 +532,10 @@ nav a:hover {
   }
 
 
+}
+
+@media (max-width: 600px){
+  nav{
+    max-width: 400px;
+  }
 }
