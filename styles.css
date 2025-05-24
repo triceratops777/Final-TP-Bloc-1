@@ -532,13 +532,22 @@ nav a:hover {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
-
-
 }
-
-@media (max-width: 400px){
-  .nav-icon svg {
-  width: 24px; /* scale down icons */
-  height: auto;
+@media (max-width: 600px) {
+nav svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
   }
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+}
 }
