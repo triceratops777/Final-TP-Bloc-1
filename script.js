@@ -50,27 +50,55 @@ function showSlides() {
 }
 
 
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // stop default form submission
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    const form = document.getElementById("contactForm");
 
-  const nom = document.getElementById('nom').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let isValid = true;
 
-  //if user doesn't input anything
-  if (!nom || !email || !message) {
-    alert('Veuillez remplir tous les champs.');
-    return;
+      const nom = document.getElementById("nom");
+      const nomError = nom.nextElementSibling;
+      if (nom.value.trim() === '' || nom.value.trim().length <= 1) {
+        nomError.textContent = "Le nom est requis.";
+        nomError.classList.add("active");
+        isValid = false;
+      } else {
+        nomError.classList.remove("active");
+      }
+
+      const email = document.getElementById("email");
+      const emailError = email.nextElementSibling;
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (email.value.trim() === '' || !emailPattern.test(email.value.trim())) {
+        emailError.textContent = "Adresse email invalide.";
+        emailError.classList.add("active");
+        isValid = false;
+      } else {
+        emailError.classList.remove("active");
+      }
+
+      const message = document.getElementById("message");
+      const messageError = message.nextElementSibling;
+      if (message.value.trim() === '') {
+        messageError.textContent = "Le message est requis.";
+        messageError.classList.add("active");
+        isValid = false;
+      } else {
+        messageError.classList.remove("active");
+      }
+
+      if (isValid) {
+        alert("Formulaire soumis avec succès !");
+        // Optionally: form.submit();
+      }
+    });
+  } catch (e) {
+    console.error("Erreur lors de la validation du formulaire :", e);
   }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert('Veuillez entrer un email valide.');
-    return;
-  }
-
-  alert('Message envoyé !');
 });
+
 
 
 
