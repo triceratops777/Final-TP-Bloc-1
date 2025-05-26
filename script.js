@@ -51,12 +51,13 @@ function showSlides() {
 
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // Stop default form submission
+  e.preventDefault(); // stop default form submission
 
   const nom = document.getElementById('nom').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
 
+  //if user doesn't input anything
   if (!nom || !email || !message) {
     alert('Veuillez remplir tous les champs.');
     return;
@@ -69,6 +70,19 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   }
 
   alert('Message envoyé !');
-  // Optionally clear form
-  this.reset();
 });
+
+
+
+async function chargerArticle() {
+    try {
+        const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY ');
+        const data = await response.json();
+        console.log("Asynchrone : "+data);
+        console.log("Fin appel API asynchrone");
+    } catch (error) {
+        console.error('Erreur lors de l’appel API', error);
+    }
+}
+
+chargerArticle()

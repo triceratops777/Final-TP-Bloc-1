@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 
@@ -73,7 +72,7 @@ nav a:hover {
   position: relative;
   background-image: url(images/bghome.jpg);
   background-repeat: no-repeat;
-  background-attachment: absolute;
+
   background-position: top;
   background-size: cover;
   height: 50rem;
@@ -81,7 +80,7 @@ nav a:hover {
 
 .hometext{
   position: relative;
-  top: 20rem;
+  top: 23rem;
   margin:auto;
   max-width: 70rem;
   display: flex;
@@ -131,7 +130,6 @@ nav a:hover {
 #skills {
   background-image: url(images/bgskills.jpg);
   background-repeat: no-repeat;
-  background-attachment: absolute;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -227,7 +225,6 @@ nav a:hover {
   flex-direction: column;
   background-image: url(images/bgdev.jpg);
   background-repeat: no-repeat;
-  background-attachment: absolute;
   background-position: center;
   background-size: cover;
 }
@@ -236,7 +233,6 @@ nav a:hover {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
-  max-width: 50%;
   gap: 1rem;
   margin: 0 auto;
   padding-bottom: 1rem;
@@ -299,7 +295,6 @@ nav a:hover {
   background-image: url(images/bgphoto.jpg);
   position: relative;
   background-repeat: no-repeat;
-  background-attachment: absolute;
   background-position: center;
   background-size: cover;
 }
@@ -335,7 +330,6 @@ nav a:hover {
   background-image: url(images/bgfooter.jpg);
   position: relative;
   background-repeat: no-repeat;
-  background-attachment: absolute;
   background-position: center;
   background-size: cover;
   height: auto;
@@ -363,8 +357,8 @@ nav a:hover {
   border: 1px solid #cd7a4d;
   background-color: white;
   border-radius: 4px;
-  
 }
+
 
 .contact-form textarea{
   width: 100%;       
@@ -502,6 +496,7 @@ nav a:hover {
   .nav-icon{
     display: block;
   }
+
   nav {
     height: 2rem;
     align-items: center;
