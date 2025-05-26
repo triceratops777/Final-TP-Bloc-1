@@ -338,7 +338,7 @@ nav a:hover {
   background-attachment: absolute;
   background-position: center;
   background-size: cover;
-  height: 55rem;
+  height: auto;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -401,6 +401,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   gap: 1rem; 
+  overflow: visible;
 }
 
 .copyright{
@@ -411,6 +412,7 @@ nav a:hover {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
   color: white;
+  overflow: visible;
 }
 
 @media (max-width: 1105px) {
