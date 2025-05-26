@@ -74,15 +74,3 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 
 
 
-async function chargerArticle() {
-    try {
-        const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY ');
-        const data = await response.json();
-        console.log("Asynchrone : "+data);
-        console.log("Fin appel API asynchrone");
-    } catch (error) {
-        console.error('Erreur lors de l’appel API', error);
-    }
-}
-
-chargerArticle()

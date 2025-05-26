@@ -404,9 +404,19 @@ nav a:hover {
   align-items: center;
   padding: 1rem;
   font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: white;
   overflow: visible;
+}
+
+#planetimg{
+  display: block;
+  margin: auto;
+  
+}
+
+#planetimg:hover{
+  cursor: pointer;
 }
 
 @media (max-width: 1105px) {
@@ -435,6 +445,8 @@ nav a:hover {
   grid-template-rows: repeat(3, 1fr);
   margin: auto;
 }
+
+
 
 }
 
