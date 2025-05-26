@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (isValid) {
         alert("Formulaire soumis avec succès !");
-        // Optionally: form.submit();
       }
     });
   } catch (e) {
