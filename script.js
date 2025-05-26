@@ -49,6 +49,7 @@ function showSlides() {
   setTimeout(showSlides, 4000);
 }
 
+//form validation
 
 document.addEventListener("DOMContentLoaded", function () {
   try {
